@@ -8,9 +8,8 @@ import io
 import os
 
 app = Flask(__name__)
-CORS(app)  # This allows your React app to talk to Flask
+CORS(app) 
 
-# --- ML Model Setup ---
 MY_CLASSES = ["AI_Generated", "Real_Image"]
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -26,7 +25,6 @@ def get_model(num_classes):
     )
     return model
 
-# Load model once when server starts
 model = get_model(len(MY_CLASSES)).to(DEVICE)
 MODEL_PATH = "scene_ai_detector.pth"
 
@@ -36,7 +34,6 @@ if os.path.exists(MODEL_PATH):
 else:
     print("Warning: model file not found!")
 
-# Image Preprocessing
 transform = transforms.Compose([
     transforms.Resize(256),
     transforms.CenterCrop(224),
