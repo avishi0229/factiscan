@@ -1,10 +1,86 @@
 import { useState } from "react";
 import svgPaths from "../assets/svgassets";
+const PerformanceGraph = ({ data }) => {
+  const width = 420;
+  const height = 220;
+  const padding = 30;
 
+  const points = data
+    .map((d, i) => {
+      const x =
+        padding +
+        (i * (width - padding * 2)) / Math.max(data.length - 1, 1);
+      const y =
+        height -
+        padding -
+        (d / 100) * (height - padding * 2);
+      return `${x},${y}`;
+    })
+    .join(" ");
+
+  return (
+    <svg width={width} height={height} className="mx-auto">
+      {/* Axis */}
+      <line x1={padding} y1={padding} x2={padding} y2={height - padding} stroke="#7ce9ff" />
+      <line x1={padding} y1={height - padding} x2={width - padding} y2={height - padding} stroke="#7ce9ff" />
+
+      {/* Line */}
+      <polyline
+        fill="none"
+        stroke="#00FF99"
+        strokeWidth="3"
+        points={points}
+      />
+
+      {/* Dots */}
+      {data.map((d, i) => {
+        const x =
+          padding +
+          (i * (width - padding * 2)) / Math.max(data.length - 1, 1);
+        const y =
+          height -
+          padding -
+          (d / 100) * (height - padding * 2);
+        return <circle key={i} cx={x} cy={y} r="4" fill="#00FF99" />;
+      })}
+    </svg>
+  );
+};
 
 const FakeNewsdetector = () => {
   const [articleLink, setArticleLink] = useState('');
   const [articleText, setArticleText] = useState('');
+   const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [history, setHistory] = useState([]);
+
+  const handleVerify = async () => {
+    if (!articleText) return;
+
+    setLoading(true);
+
+    try {
+      const res = await fetch("http://127.0.0.1:5000/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: articleText }),
+      });
+
+      const data = await res.json();
+      setResult(data);
+
+      setHistory((prev) => [
+        ...prev,
+        Math.round(data.confidence * 100),
+      ]);
+    } catch (err) {
+      console.error(err);
+    }
+
+    setLoading(false);
+  };
+
+  const confidence = result ? Math.round(result.confidence * 100) : 0;
   return (
     <div>
       <>
@@ -137,15 +213,15 @@ const FakeNewsdetector = () => {
             </div>
 
             {/* Start Verification Button */}
-            <button className="w-full bg-[#1d5a5e] hover:bg-[#1d5a5e]/80 transition-colors text-white text-lg lg:text-2xl py-3 rounded-3xl">
-              Start Verification
+            <button onClick={handleVerify}className="w-full bg-[#1d5a5e] hover:bg-[#1d5a5e]/80 transition-colors text-white text-lg lg:text-2xl py-3 rounded-3xl">
+              {loading ? "Analyzing..." : "Start Verification"}
             </button>
           </div>
         </div>
       </section>
 
       {/* Live Stats Section */}
-      <section className="px-4 lg:px-8 py-4 lg:py-8">
+      {result&&(<section className="px-4 lg:px-8 py-4 lg:py-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl lg:text-5xl text-center text-white mb-8 lg:mb-10">
             Live Stats
@@ -163,14 +239,14 @@ const FakeNewsdetector = () => {
               <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 500 500">
                 <path
                   d={svgPaths.pee92800}
-                  fill="#00FF99"
+                  fill={result.label === "Fake" ? "#ff2525" : "#00FF99"}
                   fillOpacity="0.91"
                 />
               </svg>
 
               {/* Percentage Text */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-white text-3xl lg:text-4xl font-['Inter',sans-serif]">78 %</p>
+                <p className="text-white text-3xl lg:text-4xl font-['Inter',sans-serif]">{confidence}%</p>
               </div>
             </div>
           </div>
@@ -191,7 +267,8 @@ const FakeNewsdetector = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>)}
+      
     </div>
   )
 }
