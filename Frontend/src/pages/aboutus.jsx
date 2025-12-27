@@ -36,6 +36,7 @@ const Aboutus = () => {
             <stop offset="0.90" stopColor="#07788F" stopOpacity="0.7" />
           </linearGradient>
         </defs>
+
         <ellipse
           cx="516.5"
           cy="165.5"
@@ -75,10 +76,10 @@ const Aboutus = () => {
             y2="421.5"
             gradientUnits="userSpaceOnUse"
           >
-      
             <stop offset="0.29" stopColor="#07788F" stopOpacity="0.54" />
           </linearGradient>
         </defs>
+
         <ellipse
           cx="827"
           cy="421.5"
@@ -101,6 +102,7 @@ const Aboutus = () => {
           </p>
         </div>
       </section>
+
       <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10">
         <div className="relative max-w-[1000px] mx-auto bg-[rgba(124,233,255,0.74)] opacity-90 rounded-2xl p-6 md:p-8 lg:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
@@ -118,6 +120,7 @@ const Aboutus = () => {
           </div>
         </div>
       </section>
+
       <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10">
         <div className="max-w-[1000px] mx-auto">
           <h3 className="font-['Roboto:Regular',sans-serif] font-normal text-white text-2xl md:text-3xl lg:text-4xl text-center mb-6 md:mb-8" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -129,6 +132,7 @@ const Aboutus = () => {
                 <p className="text-white text-base">Feature Card</p>
               </div>
             </div>
+
             <div className="bg-[#1d5a5e] rounded-3xl p-4 md:p-6 h-auto md:h-[260px] flex flex-col items-center justify-center">
               <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] mb-3 flex items-center justify-center">
                 <img alt="Source verification icon" className="w-full h-full object-cover" src={imgWeb1445355921} />
@@ -140,6 +144,7 @@ const Aboutus = () => {
                 Cross reference trusted database
               </p>
             </div>
+
             <div className="bg-[#1d5a5e] opacity-50 rounded-3xl p-4 md:p-6 h-auto md:h-[200px] flex items-center justify-center">
               <div className="text-center">
                 <p className="text-white text-base">Feature Card</p>
@@ -148,6 +153,7 @@ const Aboutus = () => {
           </div>
         </div>
       </section>
+
       <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10">
         <div className="relative max-w-[1000px] mx-auto bg-[rgba(7,120,143,0.04)] border-[#7ce9ff] border-4 md:border-8 border-solid rounded-3xl md:rounded-[40px] p-6 md:p-8 lg:p-10">
           <h3 className="font-['Roboto:Regular',sans-serif] font-normal text-white text-2xl md:text-3xl lg:text-4xl text-center mb-6 md:mb-8" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -199,6 +205,7 @@ const Aboutus = () => {
           </div>
         </div>
       </section>
+
       <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10 pb-12 md:pb-16">
         <div className="relative max-w-[1000px] mx-auto bg-[rgba(124,233,255,0.74)] opacity-90 rounded-2xl p-6 md:p-8 lg:p-10">
           <h2 className="bg-clip-text font-['Roboto:Regular',sans-serif] font-normal text-3xl md:text-4xl lg:text-5xl text-center mb-6" style={{ WebkitTextFillColor: "transparent", fontVariationSettings: "'wdth' 100", backgroundImage: "linear-gradient(180.119deg, rgb(255, 255, 255) 2.5377%, rgb(124, 233, 255) 98.588%)" }}>

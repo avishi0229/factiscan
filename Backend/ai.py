@@ -8,6 +8,7 @@ import io
 import os
 
 app = Flask(__name__)
+CORS(app)
 CORS(app) 
 
 MY_CLASSES = ["AI_Generated", "Real_Image"]
@@ -48,7 +49,6 @@ def analyze():
     
     file = request.files['file']
     try:
-        # Read image from memory without saving to disk
         img = Image.open(io.BytesIO(file.read())).convert('RGB')
         img_t = transform(img)
         batch_t = torch.unsqueeze(img_t, 0).to(DEVICE)

@@ -102,7 +102,6 @@ const FakeNewsdetector = () => {
             height="300%"
             filterUnits="userSpaceOnUse"
           >
-            {/* Matches Figma blur */}
             <feGaussianBlur stdDeviation="175" result="effect1_foregroundBlur" />
           </filter>
           <linearGradient
@@ -113,15 +112,10 @@ const FakeNewsdetector = () => {
             y2="165.5"
             gradientUnits="userSpaceOnUse"
           >
-            {/* Matches Figma Gradient Colors */}
             <stop offset="0.90" stopColor="#07788F" stopOpacity="0.7" />
           </linearGradient>
         </defs>
-        
-        {/* We swapped rx/ry here to make it horizontal by default.
-           rx = 516 (half of 1032 width)
-           ry = 165 (half of 330 height)
-        */}
+
         <ellipse
           cx="516.5"
           cy="165.5"
@@ -138,7 +132,6 @@ const FakeNewsdetector = () => {
     >
       <svg
         className="block w-full h-full opacity-90 overflow-visible"
-        // 👇 This property allows the shape to squash vertically
         preserveAspectRatio="none"
         viewBox="0 0 1743 2432"
         fill="none"
@@ -185,7 +178,6 @@ const FakeNewsdetector = () => {
           </h2>
 
           <div className="space-y-4">
-            {/* Article Link Input */}
             <div className="bg-[#0b090d]/60 backdrop-blur-sm p-4 lg:p-6 rounded-2xl">
               <label className="block text-white text-base lg:text-lg mb-2">
                 Article/News link
@@ -199,7 +191,6 @@ const FakeNewsdetector = () => {
               />
             </div>
 
-            {/* Article Text Input */}
             <div className="bg-[#0b090d]/60 backdrop-blur-sm p-4 lg:p-6 rounded-2xl">
               <label className="block text-white text-base lg:text-lg mb-2">
                 Article/News Text or Headline
@@ -212,30 +203,25 @@ const FakeNewsdetector = () => {
               />
             </div>
 
-            {/* Start Verification Button */}
-            <button onClick={handleVerify}className="w-full bg-[#1d5a5e] hover:bg-[#1d5a5e]/80 transition-colors text-white text-lg lg:text-2xl py-3 rounded-3xl">
-              {loading ? "Analyzing..." : "Start Verification"}
+            <button className="w-full bg-[#1d5a5e] hover:bg-[#1d5a5e]/80 transition-colors text-white text-lg lg:text-2xl py-3 rounded-3xl">
+              Start Verification
             </button>
           </div>
         </div>
       </section>
 
-      {/* Live Stats Section */}
-      {result&&(<section className="px-4 lg:px-8 py-4 lg:py-8">
+      <section className="px-4 lg:px-8 py-4 lg:py-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl lg:text-5xl text-center text-white mb-8 lg:mb-10">
             Live Stats
           </h2>
 
-          {/* Circular Progress Chart */}
           <div className="relative flex justify-center mb-8 lg:mb-10">
             <div className="relative w-[200px] h-[200px] lg:w-[300px] lg:h-[300px]">
-              {/* Green glow effect */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-[120px] h-[120px] lg:w-[180px] lg:h-[180px] rounded-full bg-[#00FF61]/33 blur-3xl" />
               </div>
 
-              {/* SVG Progress Circle */}
               <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 500 500">
                 <path
                   d={svgPaths.pee92800}
@@ -244,14 +230,12 @@ const FakeNewsdetector = () => {
                 />
               </svg>
 
-              {/* Percentage Text */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <p className="text-white text-3xl lg:text-4xl font-['Inter',sans-serif]">{confidence}%</p>
               </div>
             </div>
           </div>
 
-          {/* Status Badges */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
             <div className="bg-[#00FF99]/91 rounded-[20px] py-2 lg:py-3 px-4 text-center">
               <p className="text-white text-sm lg:text-lg font-['Inter',sans-serif]">Verified</p>
