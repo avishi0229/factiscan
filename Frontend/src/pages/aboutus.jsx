@@ -25,7 +25,6 @@ const Aboutus = () => {
             height="300%"
             filterUnits="userSpaceOnUse"
           >
-            {/* Matches Figma blur */}
             <feGaussianBlur stdDeviation="175" result="effect1_foregroundBlur" />
           </filter>
           <linearGradient
@@ -36,15 +35,10 @@ const Aboutus = () => {
             y2="165.5"
             gradientUnits="userSpaceOnUse"
           >
-            {/* Matches Figma Gradient Colors */}
             <stop offset="0.90" stopColor="#07788F" stopOpacity="0.7" />
           </linearGradient>
         </defs>
-        
-        {/* We swapped rx/ry here to make it horizontal by default.
-           rx = 516 (half of 1032 width)
-           ry = 165 (half of 330 height)
-        */}
+
         <ellipse
           cx="516.5"
           cy="165.5"
@@ -57,8 +51,6 @@ const Aboutus = () => {
       </svg>
     </div>
     <div
-      // 1. Position matches Figma X/Y (-143, 935)
-      // 2. Width/Height swapped to match visual horizontal orientation (1654px x 843px)
       className="absolute left-[-143px] top-[935px] w-[1654px] h-[843px] pointer-events-none"
     >
       <svg
@@ -76,7 +68,6 @@ const Aboutus = () => {
             height="300%"
             filterUnits="userSpaceOnUse"
           >
-            {/* High blur for soft background effect */}
             <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur" />
           </filter>
           <linearGradient
@@ -87,15 +78,10 @@ const Aboutus = () => {
             y2="421.5"
             gradientUnits="userSpaceOnUse"
           >
-            {/* Teal color matching design */}
             <stop offset="0.29" stopColor="#07788F" stopOpacity="0.54" />
           </linearGradient>
         </defs>
-        
-        {/* Horizontal Ellipse 
-            rx = 827 (half of 1654 width)
-            ry = 421.5 (half of 843 height)
-        */}
+
         <ellipse
           cx="827"
           cy="421.5"
@@ -119,7 +105,6 @@ const Aboutus = () => {
         </div>
       </section>
 
-      {/* Our Mission Section */}
       <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10">
         <div className="relative max-w-[1000px] mx-auto bg-[rgba(124,233,255,0.74)] opacity-90 rounded-2xl p-6 md:p-8 lg:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
@@ -138,7 +123,6 @@ const Aboutus = () => {
         </div>
       </section>
 
-      {/* Why Choose FactiScan Section */}
       <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10">
         <div className="max-w-[1000px] mx-auto">
           <h3 className="font-['Roboto:Regular',sans-serif] font-normal text-white text-2xl md:text-3xl lg:text-4xl text-center mb-6 md:mb-8" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -146,14 +130,12 @@ const Aboutus = () => {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            {/* Side Card 1 */}
             <div className="bg-[#1d5a5e] opacity-50 rounded-3xl p-4 md:p-6 h-auto md:h-[200px] flex items-center justify-center">
               <div className="text-center">
                 <p className="text-white text-base">Feature Card</p>
               </div>
             </div>
-            
-            {/* Center Card - Source Verification */}
+
             <div className="bg-[#1d5a5e] rounded-3xl p-4 md:p-6 h-auto md:h-[260px] flex flex-col items-center justify-center">
               <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] mb-3 flex items-center justify-center">
                 <img alt="Source verification icon" className="w-full h-full object-cover" src={imgWeb1445355921} />
@@ -165,8 +147,7 @@ const Aboutus = () => {
                 Cross reference trusted database
               </p>
             </div>
-            
-            {/* Side Card 2 */}
+
             <div className="bg-[#1d5a5e] opacity-50 rounded-3xl p-4 md:p-6 h-auto md:h-[200px] flex items-center justify-center">
               <div className="text-center">
                 <p className="text-white text-base">Feature Card</p>
@@ -176,7 +157,6 @@ const Aboutus = () => {
         </div>
       </section>
 
-      {/* Meet Our Team Section */}
       <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10">
         <div className="relative max-w-[1000px] mx-auto bg-[rgba(7,120,143,0.04)] border-[#7ce9ff] border-4 md:border-8 border-solid rounded-3xl md:rounded-[40px] p-6 md:p-8 lg:p-10">
           <h3 className="font-['Roboto:Regular',sans-serif] font-normal text-white text-2xl md:text-3xl lg:text-4xl text-center mb-6 md:mb-8" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -184,7 +164,6 @@ const Aboutus = () => {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {/* Team Member 1 - Devika Jain */}
             <div className="flex flex-col items-center text-center">
               <div className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] mb-3 rounded-full overflow-hidden bg-[#D9D9D9] flex items-center justify-center">
                 <p className="font-['Roboto:Regular',sans-serif] font-normal text-[#0b090d] text-lg md:text-xl" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -201,8 +180,6 @@ const Aboutus = () => {
                 A product designer with a strong focus on creating intuitive, user-centered digital experiences. She combines visual design, UX research, and problem-solving to translate complex ideas into clean, functional products.
               </p>
             </div>
-            
-            {/* Team Member 2 */}
             <div className="flex flex-col items-center text-center">
               <div className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] mb-3 rounded-full overflow-hidden bg-[#D9D9D9]">
               </div>
@@ -216,8 +193,6 @@ const Aboutus = () => {
                 Description
               </p>
             </div>
-            
-            {/* Team Member 3 */}
             <div className="flex flex-col items-center text-center">
               <div className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] mb-3 rounded-full overflow-hidden bg-[#D9D9D9]">
               </div>
@@ -235,7 +210,6 @@ const Aboutus = () => {
         </div>
       </section>
 
-      {/* Technologies Used Section */}
       <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10 pb-12 md:pb-16">
         <div className="relative max-w-[1000px] mx-auto bg-[rgba(124,233,255,0.74)] opacity-90 rounded-2xl p-6 md:p-8 lg:p-10">
           <h2 className="bg-clip-text font-['Roboto:Regular',sans-serif] font-normal text-3xl md:text-4xl lg:text-5xl text-center mb-6" style={{ WebkitTextFillColor: "transparent", fontVariationSettings: "'wdth' 100", backgroundImage: "linear-gradient(180.119deg, rgb(255, 255, 255) 2.5377%, rgb(124, 233, 255) 98.588%)" }}>

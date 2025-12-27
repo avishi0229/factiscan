@@ -26,7 +26,6 @@ export default function ContactPage() {
             height="300%"
             filterUnits="userSpaceOnUse"
           >
-            {/* Matches Figma blur */}
             <feGaussianBlur stdDeviation="175" result="effect1_foregroundBlur" />
           </filter>
           <linearGradient
@@ -37,15 +36,10 @@ export default function ContactPage() {
             y2="165.5"
             gradientUnits="userSpaceOnUse"
           >
-            {/* Matches Figma Gradient Colors */}
             <stop offset="0.90" stopColor="#07788F" stopOpacity="0.7" />
           </linearGradient>
         </defs>
-        
-        {/* We swapped rx/ry here to make it horizontal by default.
-           rx = 516 (half of 1032 width)
-           ry = 165 (half of 330 height)
-        */}
+
         <ellipse
           cx="516.5"
           cy="165.5"
@@ -59,19 +53,16 @@ export default function ContactPage() {
     </div>
     </>
     <div className="min-h-screen w-full overflow-x-hidden relative pb-20">
-           
-      {/* Background decorations */}
+
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#7ce9ff] opacity-10 blur-[120px] rounded-full" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#1d5a5e] opacity-20 blur-[120px] rounded-full" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16 max-w-7xl space-y-24">
-        
-        {/* --- Section 1: Contact Grid --- */}
+
         <div className="grid lg:grid-cols-2 gap-8">
-          
-          {/* Left Column: Message Form */}
+
           <div className="bg-[rgba(124,233,255,0.74)]/90 backdrop-blur-sm rounded-[30px] p-8 md:p-12 shadow-lg h-full flex flex-col justify-center">
             <h2 className="font-sans text-4xl md:text-5xl text-center text-white mb-8 font-normal">
               Send us a Message
@@ -79,7 +70,6 @@ export default function ContactPage() {
             <ContactForm />
           </div>
 
-          {/* Right Column: Contact Info */}
           <div className="bg-[rgba(124,233,255,0.74)]/90 backdrop-blur-sm rounded-[30px] p-8 md:p-12 h-full shadow-lg flex flex-col justify-center">
             <h2 className="font-sans text-4xl md:text-5xl text-center text-white mb-8 font-normal">
               Contact Information
@@ -88,7 +78,6 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* --- Section 2: FAQ --- */}
         <div className="flex flex-col items-center w-full max-w-4xl mx-auto">
           <h2 className="font-sans text-4xl md:text-6xl text-center text-white mb-12 font-normal">
             Frequently Asked Questions
@@ -98,7 +87,6 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* --- Section 3: CTA --- */}
         <div className="bg-white rounded-[30px] p-12 md:p-16 text-center shadow-xl max-w-5xl mx-auto">
           <h3 className="font-sans text-4xl  md:text-6xl text-[#07788f] mb-6">
             Ready to start verifying?

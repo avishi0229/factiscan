@@ -49,7 +49,6 @@ function MediaUploadSection() {
     if (validTypes.includes(file.type)) {
       setUploadedFile(file);
 
-      // Create preview URL
       const url = URL.createObjectURL(file);
       setPreviewUrl(url);
     } else {
@@ -72,7 +71,6 @@ function MediaUploadSection() {
     setPreviewUrl(null);
   };
 
-  // Add these new states to your MediaUploadSection
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -84,7 +82,7 @@ function MediaUploadSection() {
 
     setLoading(true);
     const formData = new FormData();
-    formData.append("file", uploadedFile); // 'file' matches request.files['file'] in Flask
+    formData.append("file", uploadedFile);
 
     try {
       const response = await fetch("http://127.0.0.1:5000/analyze", {
@@ -95,7 +93,7 @@ function MediaUploadSection() {
       const data = await response.json();
 
       if (response.ok) {
-        setResult(data); // data contains {label, confidence}
+        setResult(data);
       } else {
         alert(data.error || "Analysis failed");
       }
@@ -109,7 +107,6 @@ function MediaUploadSection() {
 
   return (
     <div className="w-full max-w-3xl mx-auto px-3 select-none sm:px-4 lg:px-6 py-4 lg:py-6">
-      {/* Category badges */}
       <div className="flex justify-between items-center mb-4 pb-3 border-b border-white/60">
         <div className="flex-1 text-center">
           <span className="text-white text-sm sm:text-base lg:text-lg">
@@ -118,9 +115,7 @@ function MediaUploadSection() {
         </div>
       </div>
 
-      {/* Upload Section */}
       <div className="space-y-4">
-        {/* File Upload or URL Input */}
         <div>
           <label className="block text-white text-base sm:text-lg lg:text-xl mb-2">
             Video/Image Upload
@@ -163,7 +158,6 @@ function MediaUploadSection() {
                 </label>
               </div>
 
-              {/* URL Input Alternative */}
               <div className="mt-3">
                 <div className="flex items-center gap-2 mb-2">
                   <LinkIcon className="w-4 h-4 text-white/60" />
@@ -183,7 +177,6 @@ function MediaUploadSection() {
           ) : (
             <div className="bg-[#d9d9d9]/10 border border-white/30 rounded-xl p-4">
               <div className="flex items-start gap-3">
-                {/* Preview */}
                 <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-black/30 rounded-lg overflow-hidden">
                   {previewUrl &&
                     (uploadedFile.type.startsWith("image/") ? (
@@ -200,7 +193,6 @@ function MediaUploadSection() {
                     ))}
                 </div>
 
-                {/* File Info */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
                     {uploadedFile.type.startsWith("image/") ? (
@@ -217,7 +209,6 @@ function MediaUploadSection() {
                   </p>
                 </div>
 
-                {/* Remove Button */}
                 <button
                   onClick={removeFile}
                   className="flex-shrink-0 p-1 hover:bg-white/10 rounded-lg transition-colors"
@@ -230,7 +221,6 @@ function MediaUploadSection() {
           )}
         </div>
 
-        {/* Headline/Description Input */}
         <div>
           <label className="block text-white text-base sm:text-lg lg:text-xl mb-2">
             Video/Image Text or Headline
@@ -243,8 +233,6 @@ function MediaUploadSection() {
             className="w-full bg-[#d9d9d9]/10 border border-white/30 rounded-xl px-3 sm:px-4 py-3 text-white text-sm placeholder-white/40 focus:outline-none focus:border-[#7ce9ff] transition-colors resize-none"
           />
         </div>
-
-        {/* Analyze Button */}
         <div className="flex justify-center pt-2">
           <button
             onClick={handleAnalyze}
@@ -252,7 +240,6 @@ function MediaUploadSection() {
           >
             Analyze Media
           </button>
-          {/* Inside MediaUploadSection Return, after the button */}
           {loading && (
             <p className="text-[#7ce9ff] text-center mt-4">
               Analyzing patterns...
@@ -282,7 +269,6 @@ export default function AiMedia() {
       <>
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
-            // 👇 CHANGED: Reduced top from 800px to 400px to move it up
             className="absolute left-1/2 top-[320px] -translate-x-1/2 -translate-y-1/4 w-[800px] h-[800px] lg:w-[1200px] lg:h-[1200px] pointer-events-none"
           >
             <svg
@@ -356,7 +342,6 @@ export default function AiMedia() {
                   height="300%"
                   filterUnits="userSpaceOnUse"
                 >
-                  {/* Matches Figma blur */}
                   <feGaussianBlur
                     stdDeviation="175"
                     result="effect1_foregroundBlur"
@@ -370,15 +355,9 @@ export default function AiMedia() {
                   y2="165.5"
                   gradientUnits="userSpaceOnUse"
                 >
-                  {/* Matches Figma Gradient Colors */}
                   <stop offset="0.90" stopColor="#07788F" stopOpacity="0.7" />
                 </linearGradient>
               </defs>
-
-              {/* We swapped rx/ry here to make it horizontal by default.
-           rx = 516 (half of 1032 width)
-           ry = 165 (half of 330 height)
-        */}
               <ellipse
                 cx="516.5"
                 cy="165.5"
@@ -393,7 +372,6 @@ export default function AiMedia() {
         </div>
       </>
       <main className="relative z-10">
-        {/* Hero Section */}
         <section className="text-center px-3 sm:px-4 lg:px-6 py-4 sm:py-6 lg:py-8">
           <h2
             className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 bg-clip-text"
@@ -418,10 +396,8 @@ export default function AiMedia() {
           </p>
         </section>
 
-        {/* Upload Section */}
         <MediaUploadSection />
 
-        {/* CTA Section */}
         <section className="text-center px-3 sm:px-4 lg:px-6 py-6 sm:py-8 lg:py-12 mt-6 sm:mt-8 lg:mt-12">
           <h3
             className="text-xl sm:text-2xl lg:text-3xl text-white mb-2 sm:mb-3 font-medium"

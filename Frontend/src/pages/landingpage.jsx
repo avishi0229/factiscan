@@ -20,12 +20,10 @@ const Landingpage = () => {
 
       <>
         <div
-          // 1. Position matches Figma X/Y
-          // 2. Width/Height matches Figma's visual dimensions (swapped because we aren't rotating)
           className="absolute left-[-237px] top-[-155px] w-[1033px] h-[331px] pointer-events-none"
         >
           <svg
-            className="w-full h-full overflow-visible" // overflow-visible prevents the glow from cutting off
+            className="w-full h-full overflow-visible"
             viewBox="0 0 1033 331"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +37,6 @@ const Landingpage = () => {
                 height="300%"
                 filterUnits="userSpaceOnUse"
               >
-                {/* Matches Figma blur */}
                 <feGaussianBlur stdDeviation="175" result="effect1_foregroundBlur" />
               </filter>
               <linearGradient
@@ -50,15 +47,10 @@ const Landingpage = () => {
                 y2="165.5"
                 gradientUnits="userSpaceOnUse"
               >
-                {/* Matches Figma Gradient Colors */}
                 <stop offset="0.90" stopColor="#07788F" stopOpacity="0.7" />
               </linearGradient>
             </defs>
 
-            {/* We swapped rx/ry here to make it horizontal by default.
-           rx = 516 (half of 1032 width)
-           ry = 165 (half of 330 height)
-        */}
             <ellipse
               cx="516.5"
               cy="165.5"
@@ -70,15 +62,11 @@ const Landingpage = () => {
             />
           </svg>
         </div>
-
-        {/* Top right glow 1 */}
         <div
-          // 1. Position from Figma Screenshot 2 (X: 732, Y: 116)
-          // 2. Width/Height based on the visual bounding box (753px x 616px)
           className="absolute left-[800px] top-[116px] w-[753px] h-[616px] pointer-events-none"
         >
           <svg
-            className="w-full h-full overflow-visible" // overflow-visible is crucial for the heavy blur
+            className="w-full h-full overflow-visible"
             viewBox="0 0 753 616"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -106,12 +94,6 @@ const Landingpage = () => {
               </linearGradient>
             </defs>
 
-            {/* ellipse logic:
-           cx = 376.5 (half of 753 width)
-           cy = 308   (half of 616 height)
-           rx = 376.5 (x-radius)
-           ry = 308   (y-radius)
-        */}
             <ellipse
               cx="376.5"
               cy="308"
@@ -124,12 +106,8 @@ const Landingpage = () => {
           </svg>
         </div>
 
-        {/* Top right glow 2 */}
 
-
-        {/* Features left glow */}
         <div
-          // Shifted right by 30px: -55px + 30px = -25px
           className="absolute left-[15px] top-[917px] w-[443px] h-[540px] pointer-events-none"
         >
           <svg
@@ -171,9 +149,7 @@ const Landingpage = () => {
             />
           </svg>
         </div>
-        {/* Features center glow */}
         <div
-          // Shifted right by 30px: 434px + 30px = 464px
           className="absolute left-[475px] top-[917px] w-[440px] h-[540px] pointer-events-none"
         >
           <svg
@@ -215,9 +191,7 @@ const Landingpage = () => {
             />
           </svg>
         </div>
-        {/* Features right glow */}
         <div
-          // Shifted right by 30px: 895px + 30px = 925px
           className="absolute left-[935px] top-[915px] w-[431px] h-[540px] pointer-events-none"
         >
           <svg
@@ -263,7 +237,6 @@ const Landingpage = () => {
 
       <section className="relative px-6 pt-8 md:pt-12 pb-12 md:pb-20 select-none">
         <div className="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Content */}
           <div className="lg:pt-12">
             <h2
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-white mb-2 md:mb-4"
@@ -422,7 +395,6 @@ const Landingpage = () => {
                   <path d={svgPaths.p1d80e00} fill="white" id="Arrow 2" />
                   <path d={svgPaths.p2a794d80} fill="white" id="Arrow 3" />
 
-                  {/* Step Numbers - centered in circles */}
                   <text x="114.5" y="115" fill="white" fontSize="52" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fontFamily="'Roboto', sans-serif">1</text>
                   <text x="394.5" y="115" fill="white" fontSize="52" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fontFamily="'Roboto', sans-serif">2</text>
                   <text x="684.5" y="115" fill="white" fontSize="52" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fontFamily="'Roboto', sans-serif">3</text>
@@ -450,7 +422,6 @@ const Landingpage = () => {
             </div>
           </div>
 
-          {/* Step Descriptions - aligned with circles */}
           <div className="grid grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-[1062px] mx-auto px-4">
             {steps.map((step, index) => (
               <div key={index} className="text-center">
