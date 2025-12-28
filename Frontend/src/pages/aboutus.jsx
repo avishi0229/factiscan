@@ -1,7 +1,27 @@
 import React from 'react'
 import imgImage7 from '../assets/image7.svg'
 import imgWeb1445355921 from '../assets/web_1445355921.svg'
+import rocketIcon from '../assets/rocket_2075411.png';
+import usersIcon from '../assets/check_147246761.png';
+import devicesIcon from '../assets/mobile_157148241.png';
 const Aboutus = () => {
+  const features = [
+    {
+      title: "Built for Speed & Scale",
+      description: "Optimized to handle high volumes of content without compromising performance.",
+      icon: rocketIcon,
+    },
+    {
+      title: "User-Friendly Experience",
+      description: "Clean, intuitive design that makes verification easy for everyone.",
+      icon: usersIcon,
+    },
+    {
+      title: "Cross-Platform Support",
+      description: "Verify information from websites, social media, and digital platforms in one place.",
+      icon: devicesIcon,
+    },
+  ];
   return (
     <div className='select-none'>
         <>
@@ -238,6 +258,36 @@ const Aboutus = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section className='relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10 pb-12 md:pb-16'>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        
+        {features.map((feature, index) => (
+          <div 
+            key={index} 
+            className="bg-[#124e5e] rounded-2xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-[#165a6b] transition-colors duration-300"
+          >
+            {/* Icon Wrapper */}
+            <div className="mb-6 p-4 bg-white/10 rounded-full backdrop-blur-sm">
+              {/* 2. Render the SVG using a standard img tag */}
+              <img 
+                src={feature.icon} 
+                alt={feature.title} 
+                className="w-12 h-12" 
+              />
+            </div>
+
+            <h3 className="text-white font-bold text-xl mb-3">
+              {feature.title}
+            </h3>
+
+            <p className="text-gray-200 text-sm leading-relaxed">
+              {feature.description}
+            </p>
+          </div>
+        ))}
+
+      </div>
       </section>
     </div>
   )

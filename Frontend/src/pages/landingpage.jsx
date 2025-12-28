@@ -6,7 +6,7 @@ import imgImage6 from "../assets/image6.svg";
 import svgPaths from '../assets/svgassets.js'
 import { Link } from 'react-router-dom';
 import imageshield from '../assets/imageshield.svg'
-import mrfactiscan  from '../assets/Ellipse28.svg'
+import mrfactiscan from '../assets/Ellipse28.svg'
 
 const Landingpage = () => {
   const steps = [
@@ -442,91 +442,97 @@ const Landingpage = () => {
           </div>
         </div>
       </section>
-      <section className="min-h-screen text-white flex items-center justify-center p-6 md:p-12 overflow-hidden relative">
-      
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
-        
-        <div className="relative flex justify-center items-center min-h-[700px]">
-          
-          
-          <div 
-           
-            className="absolute left-[180px] top-[120px] -translate-x-1/2 -translate-y-1/4 w-[600px] h-[500px] lg:w-[1000px] lg:h-[1000px] pointer-events-none"
-          >
-            <svg
-              className="block w-full h-full opacity-90 overflow-visible"
-              preserveAspectRatio="none"
-              viewBox="0 0 1743 2432"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+      <section className="min-h-screen text-white flex items-center justify-center p-6 md:p-12 lg:p-24 overflow-hidden relative bg-black">
+        <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
+
+          {/* Left Side: Large Shield with Background Glow */}
+          <div className="relative flex justify-center items-center">
+            {/* Background SVG Glow - Positioned behind the shield */}
+            <div
+
+              className="absolute left-[180px] top-[60px] -translate-x-1/2 -translate-y-1/4 w-[600px] h-[500px] lg:w-[1000px] lg:h-[1000px] pointer-events-none"
             >
-              <g filter="url(#filter0_f_1_46)" opacity="0.9">
-                <ellipse cx="860" cy="1200" rx="517" ry="860" fill="url(#paint0_linear_1_46)" />
-              </g>
-              <defs>
-                <filter
-                  id="filter0_f_1_46"
-                  x="-100%"
-                  y="-100%"
-                  width="300%"
-                  height="300%"
-                  filterUnits="userSpaceOnUse"
-                  colorInterpolationFilters="sRGB"
-                >
-                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                  <feGaussianBlur stdDeviation="175" result="effect1_foregroundBlur_1_46" />
-                </filter>
-                <linearGradient
-                  id="paint0_linear_1_46"
-                  x1="1207.25"
-                  y1="268.152"
-                  x2="420.469"
-                  y2="1858.28"
-                  gradientUnits="userSpaceOnUse"
-                >
-                 
-                  <stop offset="0.829909" stopColor="#07788F" stopOpacity="0.54" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          
-          <img 
-            src={imageshield}
-            alt="FactiScan Shield Logo" 
-            className="relative z-10 w-full max-w-[1000px] h-auto object-contain drop-shadow-2xl"
-          />
-        </div>
-        <div className="flex flex-col space-y-6 relative z-10">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full overflow-hidden border border-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.3)]">
-              <img 
-                src={mrfactiscan}
-                alt="Mr. Factiscan" 
-                className="w-full h-full object-cover"
-              />
+              <svg
+                className="block w-full h-full opacity-90 overflow-visible"
+                preserveAspectRatio="none"
+                viewBox="0 0 1743 2432"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#filter0_f_1_46)" opacity="0.9">
+                  <ellipse cx="860" cy="1200" rx="517" ry="860" fill="url(#paint0_linear_1_46)" />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_f_1_46"
+                    x="-100%"
+                    y="-100%"
+                    width="300%"
+                    height="300%"
+                    filterUnits="userSpaceOnUse"
+                    colorInterpolationFilters="sRGB"
+                  >
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="175" result="effect1_foregroundBlur_1_46" />
+                  </filter>
+                  <linearGradient
+                    id="paint0_linear_1_46"
+                    x1="1207.25"
+                    y1="268.152"
+                    x2="420.469"
+                    y2="1858.28"
+                    gradientUnits="userSpaceOnUse"
+                  >
+
+                    <stop offset="0.829909" stopColor="#07788F" stopOpacity="0.54" />
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
-            <h3 className="text-xl font-bold text-cyan-400 tracking-wide">
-              Mr. Factiscan
-            </h3>
+
+            {/* The Shield - Now much larger */}
+            <img
+              src={imageshield}
+              alt="FactiScan Shield Logo"
+              className="relative z-10 w-full max-w-[700px] xl:max-w-[900px] h-auto object-contain drop-shadow-[0_0_80px_rgba(34,211,238,0.4)] transition-transform duration-700 hover:scale-105"
+            />
           </div>
 
-          <div className="text-gray-300 text-lg md:text-xl leading-relaxed space-y-4 font-light">
-            <p>
-              Misinformation doesn’t just mislead—it shapes opinions, decisions, and realities.
-            </p>
-            <p>
-              <strong className="text-cyan-400 font-semibold">FactiScan</strong> is an AI-driven verification bot designed to challenge what you read before you believe it.
-            </p>
-            <p>
-              From detecting fake news to identifying manipulated or AI-generated media, <strong className="text-cyan-400 font-semibold">FactiScan</strong> empowers users with verified insights, ensuring that truth is no longer lost in the noise.
-            </p>
+          {/* Right Side: Large Scale Content */}
+          <div className="flex flex-col space-y-10 relative z-10">
+
+            {/* Header with Avatar */}
+            <div className="flex items-center space-x-5">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.5)]">
+                <img
+                  src={mrfactiscan}
+                  alt="Mr. Factiscan"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-cyan-400 tracking-tight">
+                Mr. Factiscan
+              </h3>
+            </div>
+
+            {/* Main Text Content */}
+            <div className="text-gray-300 text-xl md:text-2xl lg:text-3xl leading-relaxed space-y-8 font-light max-w-2xl">
+              <p>
+                Misinformation doesn’t just mislead—it <span className="text-white font-normal">shapes opinions, decisions, and realities.</span>
+              </p>
+              <p>
+                <strong className="text-cyan-400 font-bold">FactiScan</strong> is an AI-driven verification bot designed to challenge what you read before you believe it.
+              </p>
+              <p className="opacity-90">
+                From detecting fake news to identifying manipulated media, <strong className="text-cyan-400 font-bold">FactiScan</strong> empowers users with verified insights, ensuring truth is no longer lost in the noise.
+              </p>
+            </div>
           </div>
+
         </div>
-      </div>
-    </section>
-    </div>
+      </section>
+    </div >
   )
 }
 

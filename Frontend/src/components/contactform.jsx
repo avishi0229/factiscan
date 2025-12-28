@@ -11,7 +11,6 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log('Form submitted:', formData);
     setIsSubmitted(true);
     setTimeout(() => {
@@ -63,6 +62,7 @@ export default function ContactForm() {
         <label htmlFor="message" className="block text-white mb-2 ml-1 text-sm font-medium">
           Message
         </label>
+        {/* UPDATED: Added h-[140px] to match the Address box height */}
         <textarea
           id="message"
           name="message"
@@ -70,8 +70,7 @@ export default function ContactForm() {
           onChange={handleChange}
           placeholder="Write your message here..."
           required
-          rows={4}
-          className="w-full p-4 text-sm bg-[#d9d9d9] text-black placeholder:text-gray-600 resize-none focus:outline-none focus:ring-2 focus:ring-[#1d5a5e] rounded-lg transition-all"
+          className="w-full h-[140px] p-4 text-sm bg-[#d9d9d9] text-black placeholder:text-gray-600 resize-none focus:outline-none focus:ring-2 focus:ring-[#1d5a5e] rounded-lg transition-all"
         />
       </div>
       <button

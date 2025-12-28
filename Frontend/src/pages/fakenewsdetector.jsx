@@ -209,7 +209,7 @@ const FakeNewsdetector = () => {
           </div>
         </div>
       </section>
-
+       {result && (
       <section className="px-4 lg:px-8 py-4 lg:py-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl lg:text-5xl text-center text-white mb-8 lg:mb-10">

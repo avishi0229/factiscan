@@ -30,12 +30,13 @@ export default function ContactInfo() {
         </div>
       </div>
 
-      {/* Address Field (Taller to fit text) */}
+      {/* Address Field */}
       <div>
         <label className="block text-white mb-2 ml-1 text-sm font-medium">
           Address
         </label>
-        <div className="w-full min-h-[100px] p-4 bg-[#d9d9d9] rounded-lg flex items-start gap-3 transition-transform hover:scale-[1.02] cursor-pointer select-none">
+        {/* UPDATED: Changed min-h-[100px] to h-[140px] to match Textarea */}
+        <div className="w-full h-[140px] p-4 bg-[#d9d9d9] rounded-lg flex items-start gap-3 transition-transform hover:scale-[1.02] cursor-pointer select-none">
           <MapPin className="w-5 h-5 text-[#1d5a5e] flex-shrink-0 mt-0.5" />
           <p className="text-sm text-black leading-relaxed">
             123 Truth Avenue, San Francisco<br />
