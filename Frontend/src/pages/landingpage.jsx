@@ -235,9 +235,9 @@ const Landingpage = () => {
         </div>
       </>
 
-      <section className="relative px-6 pt-8 md:pt-12 pb-12 md:pb-20 select-none">
+      <section className="relative px-6 pt-6 md:pt-7 pb-12 md:pb-20 select-none">
         <div className="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="lg:pt-12">
+          <div className="lg:pt-11">
             <h2
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-white mb-2 md:mb-4"
               style={{ fontFamily: "'Roboto', sans-serif" }}
@@ -259,14 +259,14 @@ const Landingpage = () => {
               className="text-base md:text-lg lg:text-xl text-white leading-relaxed mb-8 md:mb-12 max-w-[576px]"
               style={{ fontFamily: "'Roboto', sans-serif" }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+              FactiScan is an AI-powered system that finds false information and checks online news and media content on its own. Users send in a news URL, and the system uses NLP-based text analysis to look at the language patterns, semantic consistency, and source reliability of the content. It then sorts the content into four groups: verified, unverified, fake, and misinformation.
+              </p>
 
-            <div className="flex flex-wrap gap-4 lg:gap-6">
+            <div className="flex flex-wrap gap-3 lg:gap-6">
               <Link
                 to="/FakeNewsdetector">
                 <button
-                  className="bg-[#1d5a5e] rounded-[20px] px-6 md:px-8 py-2.5 md:py-3 cursor-pointer text-lg md:text-xl lg:text-2xl text-white hover:bg-[#2a7a7f] transition-all duration-300"
+                  className="bg-[#1d5a5e] rounded-[20px] px-6 md:px-8 py-2.5 md:py-3.5 cursor-pointer text-lg md:text-xl lg:text-2xl text-white hover:bg-[#2a7a7f] transition-all duration-300"
                   style={{ fontFamily: "'Roboto', sans-serif" }}
                 >
                   Analyze Now
@@ -275,7 +275,7 @@ const Landingpage = () => {
               <Link
                 to="/aboutus">
                 <button
-                  className="border-2 md:border-[3px] lg:border-[5px] cursor-pointer border-[#1d5a5e] rounded-[20px] px-6 md:px-8 py-2.5 md:py-3 text-lg md:text-xl lg:text-2xl text-white hover:bg-[#1d5a5e]/20 transition-all duration-300"
+                  className="border-2 md:border-[2px] lg:border-[4px] cursor-pointer border-[#1d5a5e] rounded-[20px] px-4 md:px-7 py-2 md:py-2.5 text-lg md:text-xl lg:text-2xl text-white hover:bg-[#1d5a5e]/20 transition-all duration-300"
                   style={{ fontFamily: "'Roboto', sans-serif" }}
                 >
                   Learn More
@@ -371,91 +371,91 @@ const Landingpage = () => {
           </div>
         </div>
       </section>
-      <section className="relative py-12 select-none md:py-20 px-6 bg-black">
-  <div className="max-w-[1440px] mx-auto">
-    <h2
-      className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center mb-12 md:mb-24 bg-clip-text mx-auto"
-      style={{
-        fontFamily: "'Roboto', sans-serif",
-        WebkitTextFillColor: 'transparent',
-        backgroundImage: 'linear-gradient(180.277deg, rgb(255, 255, 255) 19.454%, rgb(124, 233, 255) 74.199%)'
-      }}
-    >
-      How it Works
-    </h2>
-
-    {/* Container for both SVG and Text to keep them width-synced */}
-    <div className="max-w-[1062px] mx-auto">
-      
-      {/* SVG Graphics Layer */}
-      <div className="relative mb-8 md:mb-10">
-        <div className="w-full h-auto">
-          <svg 
-            className="w-full h-auto" 
-            viewBox="0 0 1063 204" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid meet"
+      <section className="relative py-12 select-none md:py-20 px-6">
+        <div className="max-w-[1440px] mx-auto">
+          <h2
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center mb-12 md:mb-24 bg-clip-text mx-auto"
+            style={{
+              fontFamily: "'Roboto', sans-serif",
+              WebkitTextFillColor: 'transparent',
+              backgroundImage: 'linear-gradient(180.277deg, rgb(255, 255, 255) 19.454%, rgb(124, 233, 255) 74.199%)'
+            }}
           >
-            <g id="Group 8">
-              <path d={svgPaths.pf3c6b80} fill="url(#paint0_linear_1_80)" fillOpacity="0.91" id="Ellipse 12" />
-              <path d={svgPaths.p1a17e580} fill="url(#paint1_linear_1_80)" fillOpacity="0.91" id="Ellipse 18" />
-              <path d={svgPaths.p37ccac00} fill="url(#paint2_linear_1_80)" fillOpacity="0.91" id="Ellipse 19" />
-              <path d={svgPaths.p124100} fill="url(#paint3_linear_1_80)" fillOpacity="0.91" id="Ellipse 20" />
-              
-              <path d={svgPaths.p121b7000} fill="white" id="Arrow 1" />
-              <path d={svgPaths.p1d80e00} fill="white" id="Arrow 2" />
-              <path d={svgPaths.p2a794d80} fill="white" id="Arrow 3" />
+            How it Works
+          </h2>
 
-              <text x="105" y="110" fill="white" fontSize="52" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fontFamily="'Roboto', sans-serif">1</text>
-              <text x="388" y="110" fill="white" fontSize="52" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fontFamily="'Roboto', sans-serif">2</text>
-              <text x="677" y="110" fill="white" fontSize="52" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fontFamily="'Roboto', sans-serif">3</text>
-              <text x="965" y="110" fill="white" fontSize="52" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fontFamily="'Roboto', sans-serif">4</text>
-            </g>
-            <defs>
-              <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_80" x1="285.5" x2="-56" y1="-11.0001" y2="-11.0001">
-                <stop offset="0.35975" stopColor="#7CE9FF" />
-                <stop offset="0.841327" stopColor="#07788F" />
-              </linearGradient>
-              <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_1_80" x1="565.5" x2="224" y1="-11.0001" y2="-11.0001">
-                <stop offset="0.35975" stopColor="#7CE9FF" />
-                <stop offset="0.841327" stopColor="#07788F" />
-              </linearGradient>
-              <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_1_80" x1="855.5" x2="514" y1="-11.0001" y2="-11.0001">
-                <stop offset="0.35975" stopColor="#7CE9FF" />
-                <stop offset="0.841327" stopColor="#07788F" />
-              </linearGradient>
-              <linearGradient gradientUnits="userSpaceOnUse" id="paint3_linear_1_80" x1="1144.5" x2="803" y1="-11.0001" y2="-11.0001">
-                <stop offset="0.35975" stopColor="#7CE9FF" />
-                <stop offset="0.841327" stopColor="#07788F" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-      </div>
+          {/* Container for both SVG and Text to keep them width-synced */}
+          <div className="max-w-[1062px] mx-auto">
 
-      {/* Text Labels Layer */}
-      <div className="grid grid-cols-4 gap-2 md:gap-4 px-2">
-        {steps.map((step, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
-            <h3
-              className="text-[10px] sm:text-sm md:text-xl lg:text-2xl font-bold text-[#7ce9ff] mb-1 md:mb-3 uppercase tracking-wide"
-              style={{ fontFamily: "'Roboto', sans-serif" }}
-            >
-              {step.label}
-            </h3>
-            <p
-              className="text-[8px] sm:text-xs md:text-sm lg:text-base text-white/70 leading-tight md:leading-relaxed max-w-[180px]"
-              style={{ fontFamily: "'Roboto', sans-serif" }}
-            >
-              {step.description}
-            </p>
+            {/* SVG Graphics Layer */}
+            <div className="relative mb-8 md:mb-10">
+              <div className="w-full h-auto">
+                <svg
+                  className="w-full h-auto"
+                  viewBox="0 0 1063 204"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid meet"
+                >
+                  <g id="Group 8">
+                    <path d={svgPaths.pf3c6b80} fill="url(#paint0_linear_1_80)" fillOpacity="0.91" id="Ellipse 12" />
+                    <path d={svgPaths.p1a17e580} fill="url(#paint1_linear_1_80)" fillOpacity="0.91" id="Ellipse 18" />
+                    <path d={svgPaths.p37ccac00} fill="url(#paint2_linear_1_80)" fillOpacity="0.91" id="Ellipse 19" />
+                    <path d={svgPaths.p124100} fill="url(#paint3_linear_1_80)" fillOpacity="0.91" id="Ellipse 20" />
+
+                    <path d={svgPaths.p121b7000} fill="white" id="Arrow 1" />
+                    <path d={svgPaths.p1d80e00} fill="white" id="Arrow 2" />
+                    <path d={svgPaths.p2a794d80} fill="white" id="Arrow 3" />
+
+                    <text x="105" y="110" fill="white" fontSize="52" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fontFamily="'Roboto', sans-serif">1</text>
+                    <text x="388" y="110" fill="white" fontSize="52" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fontFamily="'Roboto', sans-serif">2</text>
+                    <text x="677" y="110" fill="white" fontSize="52" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fontFamily="'Roboto', sans-serif">3</text>
+                    <text x="965" y="110" fill="white" fontSize="52" fontWeight="bold" textAnchor="middle" dominantBaseline="middle" fontFamily="'Roboto', sans-serif">4</text>
+                  </g>
+                  <defs>
+                    <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_80" x1="285.5" x2="-56" y1="-11.0001" y2="-11.0001">
+                      <stop offset="0.35975" stopColor="#7CE9FF" />
+                      <stop offset="0.841327" stopColor="#07788F" />
+                    </linearGradient>
+                    <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_1_80" x1="565.5" x2="224" y1="-11.0001" y2="-11.0001">
+                      <stop offset="0.35975" stopColor="#7CE9FF" />
+                      <stop offset="0.841327" stopColor="#07788F" />
+                    </linearGradient>
+                    <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_1_80" x1="855.5" x2="514" y1="-11.0001" y2="-11.0001">
+                      <stop offset="0.35975" stopColor="#7CE9FF" />
+                      <stop offset="0.841327" stopColor="#07788F" />
+                    </linearGradient>
+                    <linearGradient gradientUnits="userSpaceOnUse" id="paint3_linear_1_80" x1="1144.5" x2="803" y1="-11.0001" y2="-11.0001">
+                      <stop offset="0.35975" stopColor="#7CE9FF" />
+                      <stop offset="0.841327" stopColor="#07788F" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+
+            {/* Text Labels Layer */}
+            <div className="grid grid-cols-4 gap-2 md:gap-4 px-2">
+              {steps.map((step, index) => (
+                <div key={index} className="flex flex-col items-center text-center">
+                  <h3
+                    className="text-[10px] sm:text-sm md:text-xl lg:text-2xl font-bold text-[#7ce9ff] mb-1 md:mb-3 uppercase tracking-wide"
+                    style={{ fontFamily: "'Roboto', sans-serif" }}
+                  >
+                    {step.label}
+                  </h3>
+                  <p
+                    className="text-[8px] sm:text-xs md:text-sm lg:text-base text-white/70 leading-tight md:leading-relaxed max-w-[180px]"
+                    style={{ fontFamily: "'Roboto', sans-serif" }}
+                  >
+                    {step.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
       <section className="min-h-screen text-white flex items-center justify-center p-6 md:p-12 lg:p-24 overflow-hidden relative bg-black">
         <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
 
@@ -509,7 +509,7 @@ const Landingpage = () => {
             <img
               src={imageshield}
               alt="FactiScan Shield Logo"
-              className="relative z-10 w-full max-w-[700px] xl:max-w-[900px] h-auto object-contain drop-shadow-[0_0_80px_rgba(34,211,238,0.4)] transition-transform duration-700 hover:scale-105"
+              className="relative z-12 w-full max-w-[1000px] xl:max-w-[2000px] h-auto object-contain drop-shadow-[0_0_80px_rgba(34,211,238,0.4)] transition-transform duration-700 hover:scale-110"
             />
           </div>
 

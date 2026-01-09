@@ -203,7 +203,8 @@ const FakeNewsdetector = () => {
               />
             </div>
 
-            <button className="w-full bg-[#1d5a5e] hover:bg-[#1d5a5e]/80 transition-colors text-white text-lg lg:text-2xl py-3 rounded-3xl">
+            <button onClick={handleVerify}
+            className="w-full bg-[#1d5a5e] hover:bg-[#1d5a5e]/80 transition-colors text-white text-lg lg:text-2xl py-3 rounded-3xl">
               Start Verification
             </button>
           </div>

@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import imgImage7 from '../assets/image7.svg'
 import imgWeb1445355921 from '../assets/web_1445355921.svg'
 import rocketIcon from '../assets/rocket_2075411.png';
 import usersIcon from '../assets/check_147246761.png';
 import devicesIcon from '../assets/mobile_157148241.png';
+import devikaImg from '../assets/devikajain.jpeg';
+import aniketImg from '../assets/aniket.png';
+import rayyanImg from '../assets/Rayyan_The_Great.jpg'
 const Aboutus = () => {
   const features = [
     {
+      title: "Source Verification",
+      description: "Cross reference trusted database",
+      icon: imgWeb1445355921,
+    }, {
       title: "Built for Speed & Scale",
       description: "Optimized to handle high volumes of content without compromising performance.",
       icon: rocketIcon,
@@ -22,96 +29,104 @@ const Aboutus = () => {
       icon: devicesIcon,
     },
   ];
+  const [active, setActive] = useState(1);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActive((prev) => (prev + 1) % features.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [features.length]);
   return (
     <div className='select-none'>
-        <>
+      <>
         <div
-      className="absolute left-[-237px] top-[-155px] w-[1033px] h-[331px] pointer-events-none"
-    >
-      <svg
-        className="w-full h-full overflow-visible" 
-        viewBox="0 0 1033 331"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <filter
-            id="glow-horizontal"
-            x="-100%"
-            y="-100%"
-            width="300%"
-            height="300%"
-            filterUnits="userSpaceOnUse"
+          className="absolute left-[-237px] top-[-155px] w-[1033px] h-[331px] pointer-events-none"
+        >
+          <svg
+            className="w-full h-full overflow-visible"
+            viewBox="0 0 1033 331"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <feGaussianBlur stdDeviation="175" result="effect1_foregroundBlur" />
-          </filter>
-          <linearGradient
-            id="grad-horizontal"
-            x1="0"
-            y1="165.5"
-            x2="1033"
-            y2="165.5"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0.90" stopColor="#07788F" stopOpacity="0.7" />
-          </linearGradient>
-        </defs>
+            <defs>
+              <filter
+                id="glow-horizontal"
+                x="-100%"
+                y="-100%"
+                width="300%"
+                height="300%"
+                filterUnits="userSpaceOnUse"
+              >
+                <feGaussianBlur stdDeviation="175" result="effect1_foregroundBlur" />
+              </filter>
+              <linearGradient
+                id="grad-horizontal"
+                x1="0"
+                y1="165.5"
+                x2="1033"
+                y2="165.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0.90" stopColor="#07788F" stopOpacity="0.7" />
+              </linearGradient>
+            </defs>
 
-        <ellipse
-          cx="516.5"
-          cy="165.5"
-          rx="516.5"
-          ry="165.5"
-          fill="url(#grad-horizontal)"
-          filter="url(#glow-horizontal)"
-          opacity="0.9"
-        />
-      </svg>
-    </div>
-    <div
-      className="absolute left-[-143px] top-[935px] w-[1654px] h-[843px] pointer-events-none"
-    >
-      <svg
-        className="w-full h-[700px] overflow-visible"
-        viewBox="0 0 1654 843"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <filter
-            id="glow-why-choose"
-            x="-100%"
-            y="-100%"
-            width="300%"
-            height="300%"
-            filterUnits="userSpaceOnUse"
+            <ellipse
+              cx="516.5"
+              cy="165.5"
+              rx="516.5"
+              ry="165.5"
+              fill="url(#grad-horizontal)"
+              filter="url(#glow-horizontal)"
+              opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          className="absolute left-[-143px] top-[935px] w-[1654px] h-[843px] pointer-events-none"
+        >
+          <svg
+            className="w-full h-[700px] overflow-visible"
+            viewBox="0 0 1654 843"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur" />
-          </filter>
-          <linearGradient
-            id="grad-why-choose"
-            x1="0"
-            y1="421.5"
-            x2="1654"
-            y2="421.5"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0.29" stopColor="#07788F" stopOpacity="0.54" />
-          </linearGradient>
-        </defs>
+            <defs>
+              <filter
+                id="glow-why-choose"
+                x="-100%"
+                y="-100%"
+                width="300%"
+                height="300%"
+                filterUnits="userSpaceOnUse"
+              >
+                <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur" />
+              </filter>
+              <linearGradient
+                id="grad-why-choose"
+                x1="0"
+                y1="421.5"
+                x2="1654"
+                y2="421.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0.29" stopColor="#07788F" stopOpacity="0.54" />
+              </linearGradient>
+            </defs>
 
-        <ellipse
-          cx="827"
-          cy="421.5"
-          rx="827"
-          ry="421.5"
-          fill="url(#grad-why-choose)"
-          filter="url(#glow-why-choose)"
-          opacity="0.9"
-        />
-      </svg>
-    </div>
-        </>
+            <ellipse
+              cx="827"
+              cy="421.5"
+              rx="827"
+              ry="421.5"
+              fill="url(#grad-why-choose)"
+              filter="url(#glow-why-choose)"
+              opacity="0.9"
+            />
+          </svg>
+        </div>
+      </>
       <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10">
         <div className="max-w-[900px] mx-auto text-center">
           <h2 className="bg-clip-text font-['Roboto:Regular',sans-serif] font-normal text-3xl md:text-4xl lg:text-5xl mb-3 md:mb-4" style={{ WebkitTextFillColor: "transparent", fontVariationSettings: "'wdth' 100", backgroundImage: "linear-gradient(180.119deg, rgb(255, 255, 255) 2.5377%, rgb(124, 233, 255) 98.588%)" }}>
@@ -141,90 +156,104 @@ const Aboutus = () => {
         </div>
       </section>
 
-      <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10">
-        <div className="max-w-[1000px] mx-auto">
-          <h3 className="font-['Roboto:Regular',sans-serif] font-normal text-white text-2xl md:text-3xl lg:text-4xl text-center mb-6 md:mb-8" style={{ fontVariationSettings: "'wdth' 100" }}>
-            Why choose FactiScan?
-          </h3> 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            <div className="bg-[#1d5a5e] opacity-50 rounded-3xl p-4 md:p-6 h-auto md:h-[200px] flex items-center justify-center">
-              <div className="text-center">
-                <p className="text-white text-base">Feature Card</p>
-              </div>
-            </div>
+      <section className="relative z-10 px-4 py-12">
+        <div className="max-w-[1100px] mx-auto">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl text-center mb-10">Why choose FactiScan?</h3>
+          <div className="relative flex justify-center items-center h-[280px]">
+            {features.map((item, index) => {
+              const total = features.length;
+              const leftIndex = (active - 1 + total) % total;
+              const rightIndex = (active + 1) % total;
+              let pos = index === active ? "center" : index === leftIndex ? "left" : index === rightIndex ? "right" : "hidden";
 
-            <div className="bg-[#1d5a5e] rounded-3xl p-4 md:p-6 h-auto md:h-[260px] flex flex-col items-center justify-center">
-              <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] mb-3 flex items-center justify-center">
-                <img alt="Source verification icon" className="w-full h-full object-cover" src={imgWeb1445355921} />
-              </div>
-              <h4 className="font-['Roboto:Bold',sans-serif] font-bold text-white text-xl md:text-2xl mb-2 text-center" style={{ fontVariationSettings: "'wdth' 100" }}>
-                Source Verification
-              </h4>
-              <p className="font-['Roboto:Regular',sans-serif] font-normal text-white text-base md:text-lg text-center" style={{ fontVariationSettings: "'wdth' 100" }}>
-                Cross reference trusted database
-              </p>
-            </div>
+              return (
+                <div key={index} className={`absolute transition-all duration-500 ease-in-out w-[320px] h-[230px] p-6 rounded-2xl border border-[rgba(124,233,255,0.3)] backdrop-blur-xl bg-[rgba(15,76,85,0.45)] flex flex-col items-center justify-center shadow-[0_0_40px_rgba(124,233,255,0.15)]
+                  ${pos === "center" ? "scale-110 opacity-100 z-20" : pos === "left" ? "-translate-x-[340px] scale-95 opacity-40 blur-sm z-10" : pos === "right" ? "translate-x-[340px] scale-95 opacity-40 blur-sm z-10" : "opacity-0 scale-90"}`}>
+                  <img src={item.icon} alt={item.title} className="w-12 h-12 mb-4 object-contain" />
+                  <h4 className="text-lg font-semibold mb-2 text-center">{item.title}</h4>
+                  <p className="text-sm text-center opacity-80">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-[#1d5a5e] opacity-50 rounded-3xl p-4 md:p-6 h-auto md:h-[200px] flex items-center justify-center">
-              <div className="text-center">
-                <p className="text-white text-base">Feature Card</p>
+      <section className="relative z-10 px-4 py-12">
+        <div className="relative max-w-[1100px] mx-auto">
+          <div
+            className="relative p-[15px] rounded-[86px]"
+            style={{
+              background:
+                "linear-gradient(180deg, #7CE9FF 29%, #1D5A5E 94%)",
+            }}
+          >
+            {/* Inner Container */}
+            <div className="bg-[#050B0F] rounded-[66px] px-6 py-12 md:px-10">
+              <h3 className="text-white text-2xl md:text-3xl lg:text-4xl text-center mb-10">
+                Meet Our Team
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Member 1 */}
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-[180px] h-[120px] md:w-[180px] md:h-[150px] mb-4 rounded-full  flex items-center justify-center text-black">
+                    <img
+                      src={devikaImg}
+                      alt="Devika Jain"
+                     className='w-[180px] h-[150px] md:w-[180px] md:h-[180px] flex items-center justify-center mb-4 rounded-full '
+                    />
+                  </div>
+                  <h4 className="text-xl font-medium text-white">Devika Jain</h4>
+                  <p className="text-[#7CE9FF] mb-2 font-medium">
+                    Product Designer
+                  </p>
+                  <p className="text-xs text-white/70  text-left leading-relaxed px-2">
+                    A product designer with a strong focus on creating intuitive, user-centered digital experiences. She combines visual design, UX research, and problem-solving to translate complex ideas into clean, functional products.
+                  </p>
+                </div>
+
+                {/* Member 2 */}
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-[180px] h-[120px] md:w-[180px] md:h-[150px] mb-4 rounded-full  flex items-center justify-center text-black">
+                    <img
+                      src={aniketImg}
+                      alt="Aniket Meena"
+                     className='w-[180px] h-[150px] md:w-[180px] md:h-[180px] flex items-center justify-center mb-4 rounded-full '
+                    />
+                  </div>
+                  <h4 className="text-xl font-medium text-white">Aniket Meena</h4>
+                  <p className="text-[#7CE9FF] mb-2 font-medium">
+                    Full Stack Developer
+                  </p>
+                  <p className="text-xs text-white/70 text-left leading-relaxed px-2">
+                    A full stack developer with a strong focus on building scalable, end-to-end web applications. They combine front-end engineering, back-end development, and system integration to transform product requirements into reliable, high-performance digital solutions.
+                  </p>
+                </div>
+
+                {/* Member 3 */}
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-[18px] h-[120px] md:w-[180px] md:h-[150px] mb-4 rounded-full flex items-center justify-center text-black">
+                    <img
+                      src={rayyanImg}
+                      alt="Rayyan Ahmad"
+                     className='w-[180px] h-[150px] md:w-[180px] md:h-[180px] flex items-center justify-center mb-4 rounded-full '
+                    />
+                  </div>
+                  <h4 className="text-xl font-medium text-white">Rayyan Ahmad</h4>
+                  <p className="text-[#7CE9FF] mb-2 font-medium">
+                    AI/ML Engineer
+                  </p>
+                  <p className="text-xs text-white/70 text-left leading-relaxed px-2">
+                    An AI/ML engineer with a strong focus on developing intelligent systems for data-driven decision making. They combine machine learning, natural language processing, and computer vision techniques to convert complex data into accurate, actionable insights.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10">
-        <div className="relative max-w-[1000px] mx-auto bg-[rgba(7,120,143,0.04)] border-[#7ce9ff] border-4 md:border-8 border-solid rounded-3xl md:rounded-[40px] p-6 md:p-8 lg:p-10">
-          <h3 className="font-['Roboto:Regular',sans-serif] font-normal text-white text-2xl md:text-3xl lg:text-4xl text-center mb-6 md:mb-8" style={{ fontVariationSettings: "'wdth' 100" }}>
-            Meet Our Team
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div className="flex flex-col items-center text-center">
-              <div className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] mb-3 rounded-full overflow-hidden bg-[#D9D9D9] flex items-center justify-center">
-                <p className="font-['Roboto:Regular',sans-serif] font-normal text-[#0b090d] text-lg md:text-xl" style={{ fontVariationSettings: "'wdth' 100" }}>
-                  pic here
-                </p>
-              </div>
-              <h4 className="bg-clip-text bg-gradient-to-b font-['Roboto:Regular',sans-serif] font-normal from-[#ffffff] from-[1.042%] to-[#7ce9ff] text-lg md:text-xl mb-1" style={{ WebkitTextFillColor: "transparent", fontVariationSettings: "'wdth' 100" }}>
-                Devika Jain
-              </h4>
-              <p className="bg-clip-text font-['Roboto:Regular',sans-serif] font-normal text-base md:text-lg mb-2" style={{ WebkitTextFillColor: "transparent", fontVariationSettings: "'wdth' 100", backgroundImage: "linear-gradient(-1.25707deg, rgb(124, 233, 255) 61.14%, rgb(74, 140, 153) 164.46%)" }}>
-                Product Designer
-              </p>
-              <p className="font-['Roboto:Regular',sans-serif] font-normal text-white text-xs md:text-sm" style={{ fontVariationSettings: "'wdth' 100" }}>
-                A product designer with a strong focus on creating intuitive, user-centered digital experiences. She combines visual design, UX research, and problem-solving to translate complex ideas into clean, functional products.
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <div className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] mb-3 rounded-full overflow-hidden bg-[#D9D9D9]">
-              </div>
-              <h4 className="bg-clip-text bg-gradient-to-b font-['Roboto:Regular',sans-serif] font-normal from-[#ffffff] from-[1.042%] to-[#7ce9ff] text-lg md:text-xl mb-1" style={{ WebkitTextFillColor: "transparent", fontVariationSettings: "'wdth' 100" }}>
-                Team Member
-              </h4>
-              <p className="bg-clip-text font-['Roboto:Regular',sans-serif] font-normal text-base md:text-lg mb-2" style={{ WebkitTextFillColor: "transparent", fontVariationSettings: "'wdth' 100", backgroundImage: "linear-gradient(-1.25707deg, rgb(124, 233, 255) 61.14%, rgb(74, 140, 153) 164.46%)" }}>
-                Role
-              </p>
-              <p className="font-['Roboto:Regular',sans-serif] font-normal text-white text-xs md:text-sm" style={{ fontVariationSettings: "'wdth' 100" }}>
-                Description
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <div className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] mb-3 rounded-full overflow-hidden bg-[#D9D9D9]">
-              </div>
-              <h4 className="bg-clip-text bg-gradient-to-b font-['Roboto:Regular',sans-serif] font-normal from-[#ffffff] from-[1.042%] to-[#7ce9ff] text-lg md:text-xl mb-1" style={{ WebkitTextFillColor: "transparent", fontVariationSettings: "'wdth' 100" }}>
-                Team Member
-              </h4>
-              <p className="bg-clip-text font-['Roboto:Regular',sans-serif] font-normal text-base md:text-lg mb-2" style={{ WebkitTextFillColor: "transparent", fontVariationSettings: "'wdth' 100", backgroundImage: "linear-gradient(-1.25707deg, rgb(124, 233, 255) 61.14%, rgb(74, 140, 153) 164.46%)" }}>
-                Role
-              </p>
-              <p className="font-['Roboto:Regular',sans-serif] font-normal text-white text-xs md:text-sm" style={{ fontVariationSettings: "'wdth' 100" }}>
-                Description
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10 pb-12 md:pb-16">
         <div className="relative max-w-[1000px] mx-auto bg-[rgba(124,233,255,0.74)] opacity-90 rounded-2xl p-6 md:p-8 lg:p-10">
@@ -258,36 +287,6 @@ const Aboutus = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className='relative z-10 px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-10 pb-12 md:pb-16'>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-        
-        {features.map((feature, index) => (
-          <div 
-            key={index} 
-            className="bg-[#124e5e] rounded-2xl p-8 flex flex-col items-center text-center shadow-lg hover:bg-[#165a6b] transition-colors duration-300"
-          >
-            {/* Icon Wrapper */}
-            <div className="mb-6 p-4 bg-white/10 rounded-full backdrop-blur-sm">
-              {/* 2. Render the SVG using a standard img tag */}
-              <img 
-                src={feature.icon} 
-                alt={feature.title} 
-                className="w-12 h-12" 
-              />
-            </div>
-
-            <h3 className="text-white font-bold text-xl mb-3">
-              {feature.title}
-            </h3>
-
-            <p className="text-gray-200 text-sm leading-relaxed">
-              {feature.description}
-            </p>
-          </div>
-        ))}
-
-      </div>
       </section>
     </div>
   )
