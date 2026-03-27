@@ -109,6 +109,3 @@ npm run dev
 
 ---
 
-## 👩‍💻 Author
-
-Avishi Verma
